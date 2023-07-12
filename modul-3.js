@@ -452,28 +452,49 @@ const meanTemperature = (yesterday + today + tomorrow) / 3;
 // свойств объекта highTemperatures.Задай значение по умолчанию для highIcon - строку
 // "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
 
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
 
-const highTemperatures = {
-  yesterday: 28,
-  today: 26,
-  tomorrow: 33,
-};
-// Change code below this line
+// const {yesterday: highYesterday, today: highToday, tomorrow: highTomorrow, icon: highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"} = highTemperatures;
 
-const {yesterday, today, tomorrow, icon} = highTemperatures;
-
-
-
-
-// Change code above this line
-const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
-
+// // Change code above this line
+// const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
 
 
 
 // =========================================================================================================================================
 
 
+// ЗАДАЧА 24. Выполни рефакторинг цикла for...of так, чтобы в нём использовалась деструктуризация объекта.
+ 
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+
+// for (const {hex, rgb} of colors) {
+//   hexColors.push(hex);
+//   rgbColors.push(rgb);
+// }
+
+
+// ============================================================================================================================================
+
+
+// ЗАДАЧА 25. Мы получили прогноз погоды на два дня, с минимальными и максимальными температурами, а также необязательными
+// иконками.Замени объявления всех переменных одной операцией деструктуризации свойств объекта forecast.
+// Задай значение по умолчанию для иконок, переменных todayIcon и tomorrowIcon - строку
+// "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
 
 
 
@@ -482,13 +503,7 @@ const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
 
 
 
-
-
-
-
-
-
-
+// ==============================================================================================================================================
 
 
 
