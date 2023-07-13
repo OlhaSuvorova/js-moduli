@@ -497,15 +497,52 @@ const meanTemperature = (yesterday + today + tomorrow) / 3;
 // "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
 
 
-
-
-
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// // Change code below this line
+// const { today: { high: highToday, low: lowToday, icon: todayIcon = "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg" },
+// tomorrow: { low: lowTomorrow, high: highTomorrow, icon: tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg" },
+// } = forecast ;
 
 
 
 // ==============================================================================================================================================
 
 
+// ЗАДАЧА 26. Функция calculateMeanTemperature(forecast) принимает один параметр forecast - объект температур на два дня
+// следующего формата.
+
+// {
+//   today: { low: 10, high: 20 },
+//   tomorrow: { low: 20, high: 30 }
+// }
+
+// Замени объявления переменных todayLow, todayHigh, tomorrowLow и tomorrowHigh одной операцией деструктуризации свойств
+// объекта forecast.
+
+
+// // Change code below this line
+// function calculateMeanTemperature(forecast) {
+//   const {today: {low: todayLow, high: todayHigh},
+//     tomorrow: {low: tomorrowLow, high: tomorrowHigh}} = forecast;
+
+//   // Change code above this line
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+
+
+// ====================================================================================================================================
+
+// ЗАДАЧА 26.
 
 
 
@@ -513,14 +550,7 @@ const meanTemperature = (yesterday + today + tomorrow) / 3;
 
 
 
-
-
-
-
-
-
-
-
+// ===========================================================================================================================================
 
 
 
