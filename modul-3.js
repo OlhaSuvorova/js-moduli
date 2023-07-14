@@ -714,94 +714,162 @@ const meanTemperature = (yesterday + today + tomorrow) / 3;
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 35. Дополни метод updateBook(oldName, newName) так, чтобы он изменял название книги с oldName на newName в свойстве 
-// books.Используй indexOf() для того, чтобы найти нужный элемент массива, и splice() для того чтобы заменить этот элемент
+// ЗАДАЧА 35. Дополни метод updateBook(oldName, newName) так, чтобы он изменял название книги с oldName на newName в свойстве
+// books. Используй indexOf() для того, чтобы найти нужный элемент массива, и splice() для того чтобы заменить этот элемент
 
 
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+//     const bookIndex = this.books.indexOf(oldName);
+//     this.books.splice(bookIndex, 1, newName);
 
+//     // Change code above this line
+//   },
+// };
+ 
 
+// ====================================================================================================================================
 
+// ЗАДАЧА 36. ЛАВКА ЗЕЛИЙ «У СТАРОЙ ЖАБЫ». К нам обратилась владелица лавки зелий «У старой жабы» и заказала программу для
+// ведения инвентаря - добавления, удаления, поиска и обновления зелий. Добавь объекту atTheOldToad свойство potions, значением
+// которого сделай пустой массив.
 
+// const atTheOldToad = {
+//   // Change code below this line
+// potions: []
+//   // Change code above this line
+// };
 
 
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 36.
+// ЗАДАЧА 37. ПОЛУЧАЕМ ВСЕ ЗЕЛЬЯ. Добавь объекту atTheOldToad метод getPotions(), который просто возвращает значение свойства
+// potions.
 
 
-
-
-
-
-
-
-
-
-
-
-// ====================================================================================================================================
-
-
-// ЗАДАЧА 37.
-
-
-
-
-
-
-
-
+// const atTheOldToad = {
+//   // Change code below this line
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//   getPotions() {
+//     return this.potions;
+//   }
+//   // Change code above this line
+// };
 
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 38.
+// ЗАДАЧА 38. ДОБАВЛЯЕМ НОВОЕ ЗЕЛЬЕ. Дополни метод addPotion(potionName) так, чтобы он добавлял зелье potionName в конец массива
+// зелий в свойстве potions.
 
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   addPotion(potionName) {
+//     // Change code below this line
+//    this.potions.push(potionName);
 
-
-
-
-
-
-
-
-
-
-
-// ====================================================================================================================================
-
-// ЗАДАЧА 39.
-
-
-
-
-
-
-
-
-
+//     // Change code above this line
+//   },
+// };
 
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 40.
+// ЗАДАЧА 39. УДАЛЯЕМ ЗЕЛЬЕ. Дополни метод removePotion(potionName) так, чтобы он удалял зелье potionName из массива зелий
+// в свойстве potions.
 
 
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   removePotion(potionName) {
+//     // Change code below this line
+//   const potionIndex = this.potions.indexOf(potionName);
+//   this.potions.splice(potionIndex, 1);
 
-
-
-
-
-
+//     // Change code above this line
+//   },
+// };
 
 
 // ====================================================================================================================================
 
+// ЗАДАЧА 40. ОБНОВЛЯЕМ ЗЕЛЬЕ. Дополни метод updatePotionName(oldName, newName) так, чтобы он обновлял название зелья с oldName
+// на newName, в массиве зелий в свойстве potions.
 
-// ЗАДАЧА 41.
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   updatePotionName(oldName, newName) {
+//     // Change code below this line
+// const potionIndex = this.potions.indexOf(oldName);
+// this.potions.splice(potionIndex, 1, newName);
+//     // Change code above this line
+//   },
+// };
 
 
+// ====================================================================================================================================
+
+// ЗАДАЧА 41. РАСШИРЯЕМ ИНВЕНТАРЬ. Заказчица хочет чтобы каждое зелье было представлено не только именем, но и ценой, а в 
+// будущем может быть и другими характеристиками.Поэтому теперь в свойстве potions будет храниться массив объектов со 
+// следующими свойствами.
+// {
+//   name: "Dragon breath",
+//   price: 700
+// }
+// Выполни рефакторинг методов объекта atTheOldToad так, чтобы они работали не с массивом строк, а с массивом объектов.
+
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//  addPotion(newPotion) {
+//       for (const item of this.potions) {
+//             if (item.name === newPotion.name) {
+//                 return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//             }
+//         }
+//         const newProduct = {
+//             ...newPotion,
+//         };
+
+//     this.potions.push(newPotion);
+//   },
+  
+//   removePotion(potionName) {
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       const potion = this.potions[i];
+//       if (potionName === potion.name) {
+//         this.potions.splice(i, 1);
+//       }
+//     }
+//   },
+
+// updatePotionName(oldName, newName) {
+//     let resalt = `Potion ${oldName} is not in inventory`;
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       const potion = this.potions[i];
+
+//       if (oldName === potion.name) {
+//         potion.name = newName;
+//         resalt = `Found ${oldName} change to ${newName} `;
+//       }
+//     }
+//     return console.log(resalt);
+//   },
+
+
+//   // Change code above this line
+// };
 
 
 
