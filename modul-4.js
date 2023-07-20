@@ -180,35 +180,32 @@
 // ЗАДАЧА 9. Выполни рефакторинг функции calculateTotalPrice() так, чтобы она использовала неявный возврат.
 
 // // Change code below this line
-// const calculateTotalPrice = (quantity, pricePerItem) => 
+// const calculateTotalPrice = (quantity, pricePerItem) =>
 //    quantity * pricePerItem;
 // // Change code above this line
 
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 10. Выполни рефакторинг функции calculateTotalPrice(orderedItems) заменив её объявление на стрелочную функцию. 
+// ЗАДАЧА 10. Выполни рефакторинг функции calculateTotalPrice(orderedItems) заменив её объявление на стрелочную функцию.
 // Замени коллбек - функцию передаваемую в метод forEach() на стрелочную функцию.
 
 
 // Change code below this line
-function calculateTotalPrice(orderedItems) {
-  let totalPrice = 0;
+// const calculateTotalPrice = (orderedItems) => {
+//   let totalPrice = 0;
 
-  orderedItems.forEach((item) => {
-    totalPrice += item;
-  });
-
-  return totalPrice;
-}
+//   orderedItems.forEach(item => totalPrice += item)
+//   return totalPrice;
+// }
 // Change code above this line
-
-
 
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 11.
+// ЗАДАЧА 11. ФИЛЬТРАЦИЯ МАССИВА ЧИСЕЛ 2.0. Замени объявление функции filterArray() и коллбек для метода forEach() на
+// стрелочные функции.
+
 
 
 
