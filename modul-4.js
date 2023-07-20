@@ -207,134 +207,189 @@
 // стрелочные функции.
 
 
+// Change code below this line
+// const filterArray = (numbers, value) => {
+//   const filteredNumbers = [];
+
+//   numbers.forEach((number) => {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   });
+//   // Change code above this line
+//   return filteredNumbers;
+// }
+
+// ====================================================================================================================================
+
+// ЗАДАЧА 12. ОБЩИЕ ЭЛЕМЕНТЫ 2.0. Замени объявление функции getCommonElements() и коллбек для метода forEach() на стрелочные 
+// функции.
+
+// Change code below this line
+// const getCommonElements = (firstArray, secondArray) => {
+//   const commonElements = [];
+
+//   firstArray.forEach((element) => {
+//     if (secondArray.includes(element)) {
+//       commonElements.push(element);
+//     }
+//   });
+
+//   // Change code above this line
+//   return commonElements;
+// }
 
 
+// ====================================================================================================================================
+
+// ЗАДАЧА 13. Функция changeEven(numbers, value) принимает массив чисел numbers и обновляет каждый элемент, значение которого 
+// это чётное число, добавляя к нему значение параметра value.
+// Выполни рефакторинг функции так, чтобы она стала чистой - не изменяла массив чисел numbers, а создавала, наполняла и 
+// возвращала новый массив с обновлёнными значениями.
 
 
-
-
-
-
-
-
-
+// function changeEven(numbers, value) {
+//   // Change code below this line
+//   for (let i = 0; i < numbers.length; i += 1) {
+//    const newArray = [];
+//   numbers.forEach(el => {
+//     if (el % 2 === 0) {
+//       newArray.push(el + value)
+//     } else newArray.push(el)
+//   });
+//   return newArray
+// }
+//   // Change code above this line
+// }
 
 
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 12.
+// ЗАДАЧА 14. Дополни код так, чтобы в переменной planetsLengths получился массив длин названий планет. Обязательно используй 
+// метод map().
 
-
-
-
-
-
-
-
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+// // Change code below this line
+// const planetsLengths = planets.map(planet => (planet.length));
 
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 13.
+// ЗАДАЧА 15. Используя метод map() сделай так, чтобы в переменной titles получился массив названий книг (свойство title) из 
+// всех объектов массива books.
 
 
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// // Change code below this line
 
+// const titles = books.map(book => book.title);
 
+// ====================================================================================================================================
 
+// ЗАДАЧА 16. Используя метод flatMap() сделай так, чтобы в переменной genres получился массив всех жанров книг (свойство genres) 
+// из массива книг books.
 
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism"],
+//   },
+// ];
+// // Change code below this line
 
-
+// const genres = books.flatMap(book => book.genres);
 
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 14.
+// ЗАДАЧА 17. Дополни функцию getUserNames(users) так, чтобы она возвращала массив имён пользователей (свойство name) из 
+// массива объектов в параметре users.
 
+// Change code below this line
+// const getUserNames = users => users.map(user => user.name); 
 
-
-
-
-
-
-
-
-// ====================================================================================================================================
-
-// ЗАДАЧА 15.
-
-
-
-
-
-
-
+// Change code above this line
 
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 16.
+// ЗАДАЧА 18. Дополни функцию getUserEmails(users) так, чтобы она возвращала массив почтовых адресов пользователей (свойство 
+// email) из массива объектов в параметре users.
 
+// // Change code below this line
+// const getUserEmails = users => users.map(user => user.email);
 
-
-
-
-
-
-
-
-
-// ====================================================================================================================================
-
-// ЗАДАЧА 17.
-
-
-
-
-
+// // Change code above this line
 
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 18.
+// ЗАДАЧА 19. Дополни код так, чтобы в переменной evenNumbers получился массив чётных чисел из массива numbers, а в переменной 
+// oddNumbers массив нечётных.Обязательно используй метод filter().
 
 
+// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// // Change code below this line
 
-
-
-
-
-
-
-
-// ====================================================================================================================================
-
-// ЗАДАЧА 19.
-
-
-
-
-
-
-
-
-
+// const evenNumbers = numbers.filter (number => number % 2 === 0);
+// const oddNumbers = numbers.filter (number => number % 2 !== 0);
 
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 20.
+// ЗАДАЧА 20. Дополни код так, чтобы в переменной allGenres был массив всех жанров книг (свойство genres) из массива books, а в 
+// переменной uniqueGenres массив уникальных жанров - без повторений.
 
-
-
-
-
-
-
-
-
-
-
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["adventure", "history"],
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    genres: ["fiction", "mysticism"],
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    genres: ["horror", "mysticism", "adventure"],
+  },
+];
+// Change code below this line
+const allGenres = books.flatMap(book => book.genres);
+const uniqueGenres = allGenres.filter(genre => genre.indexOf(genres) === index);
 
 
 // ====================================================================================================================================
