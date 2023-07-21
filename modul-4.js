@@ -389,70 +389,84 @@
 // ];
 // // Change code below this line
 // const allGenres = books.flatMap(book => book.genres);
-// const uniqueGenres = allGenres.filter(genre => genre.indexOf(genres) === index);
+// const uniqueGenres = allGenres.filter((genre, index, array) => array.indexOf(genre) === index);
 
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 21.
+// ЗАДАЧА 21. Используя метод filter() дополни код так, чтобы:
+// В переменной topRatedBooks получился массив книг рейтинг которых(свойство rating) больше либо равно значению переменной
+// MIN_RATING.
+// В переменной booksByAuthor получился массив книг написанных автором с именем(свойство author) которое совпадает со значением 
+// в переменной AUTHOR.
 
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
 
+// const MIN_RATING = 8;
+// const AUTHOR = "Bernard Cornwell";
+// // Change code below this line
 
-
-
-
-
-
-
-
-
-// ====================================================================================================================================
-
-// ЗАДАЧА 22.
-
-
-
-
-
-
-
-
-
-
-
-
-// ====================================================================================================================================
-
-// ЗАДАЧА 23.
-
-
-
-
-
-
-
-
-
+// const topRatedBooks = books.filter(book => book.rating >= MIN_RATING);
+// const booksByAuthor = books.filter(book => book.author === AUTHOR);
 
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 24.
+// ЗАДАЧА 22. Дополни функцию getUsersWithEyeColor(users, color) так, чтобы она возвращала массив пользователей у которых цвет 
+// глаз(свойство eyeColor) совпадает со значением параметра color.
 
-
-
-
-
-
-
-
-
-
+// // Change code below this line
+// const getUsersWithEyeColor = (users, color) =>
+//   users.filter(user => user.eyeColor === color)
+// // Change code above this line
 
 
 // ====================================================================================================================================
 
-// ЗАДАЧА 25.
+// ЗАДАЧА 23. Дополни функцию getUsersWithAge(users, minAge, maxAge) так, чтобы она возвращала массив пользователей, возраст 
+// которых(свойство age) попадает в промежуток от minAge до maxAge.
+
+// // Change code below this line
+// const getUsersWithAge = (users, minAge, maxAge) =>  
+//  users.filter(user => minAge <= user.age && user.age <= maxAge);
+// // Change code above this line
+
+
+// ====================================================================================================================================
+
+// ЗАДАЧА 24. Дополни функцию getUsersWithFriend(users, friendName) так, чтобы она возвращала массив пользователей у которых 
+// есть друг с именем в параметре friendName.Массив друзей пользователя хранится в свойстве friends.
+
+// // Change code below this line
+// const getUsersWithFriend = (users, friendName) =>
+//   users
+//     .filter(user => user.friends.some(friend => friend === friendName))
+    
+// // Change code above this line
+
+
+// ====================================================================================================================================
+
+// ЗАДАЧА 25. Дополни функцию getFriends(users) так, чтобы она возвращала массив друзей всех пользователей (свойство friends). 
+// У нескольких пользователей могут быть одинаковые друзья, сделай так чтобы возвращаемый массив не содержал повторений.
 
 
 
